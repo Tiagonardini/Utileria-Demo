@@ -1,0 +1,26 @@
+[
+  {
+    "id": "UTL-101",
+    "nombre": "Teléfono a disco naranja",
+    "categoria": "Teléfonos y Celulares",
+    "imagen": "./img/telefono.jpg"
+  },
+  {
+    "id": "UTL-102",
+    "nombre": "Televisor de tubo 14 pulgadas",
+    "categoria": "Electrónica, Audio y TV",
+    "imagen": "./img/tv.jpg"
+  },
+  {
+    "id": "UTL-103",
+    "nombre": "Silla de madera vintage",
+    "categoria": "Muebles",
+    "imagen": "./img/silla.jpg"
+  },
+  {
+    "id": "UTL-104",
+    "nombre": "Cenicero de cristal tallado",
+    "categoria": "Ceniceros y Tabaco",
+    "imagen": "./img/cenicero.jpg"
+  }
+]
