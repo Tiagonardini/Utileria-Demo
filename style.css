@@ -1,167 +1,45 @@
-/* Reseteo básico */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #fff; color: #333; line-height: 1.6; }
 
-body { 
-    background-color: #fff; 
-    color: #333; 
-    line-height: 1.6; 
-}
+/* Cabecera y Logo */
+header { padding: 2rem 1rem; text-align: center; border-bottom: 1px solid #eee; }
+.logo-principal { max-width: 200px; height: auto; transition: transform 0.3s; }
+.logo-principal:hover { transform: scale(1.05); }
 
-/* Cabecera */
-header { 
-    padding: 3rem 1rem; 
-    text-align: center; 
-    border-bottom: 1px solid #eee; 
-}
-
-header h1 { 
-    font-size: 2.5rem; 
-    letter-spacing: 2px; 
-    text-transform: uppercase; 
-    margin-bottom: 0.5rem; 
-}
-
-header p { 
-    color: #666; 
-    font-size: 1rem; 
-}
-/* Estilos para el nuevo logo */
-.logo-principal {
-    max-width: 250px; /* Controla el tamaño máximo del logo */
-    height: auto;
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
-}
-
-/* Un pequeño efecto para que el logo resalte un poquito al pasar el mouse */
-.logo-principal:hover {
-    transform: scale(1.05);
-}
-
-/* Modo de Alquiler */
-.modo-alquiler { 
-    background-color: #fafafa; 
-    padding: 2rem; 
-    max-width: 800px; 
-    margin: 2rem auto; 
-    border-radius: 8px; 
-    border: 1px dashed #ccc; 
-}
-
-.modo-alquiler h2 { 
-    text-align: center; 
-    margin-bottom: 1rem; 
-    font-size: 1.2rem; 
-    text-transform: uppercase; 
-}
-
-.modo-alquiler ol { 
-    margin-left: 2rem; 
-    color: #555; 
-}
-
-.modo-alquiler li { 
-    margin-bottom: 0.5rem; 
-}
+/* Secciones */
+.modo-alquiler { background-color: #fafafa; padding: 1.5rem; max-width: 800px; margin: 2rem auto; border-radius: 8px; border: 1px dashed #ccc; }
+.modo-alquiler h2 { text-align: center; margin-bottom: 1rem; font-size: 1.2rem; text-transform: uppercase; }
+.modo-alquiler ol { margin-left: 2rem; color: #555; }
 
 /* Filtros */
-.filtros { 
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 10px; 
-    padding: 1rem; 
-    max-width: 1000px; 
-    margin: 0 auto; 
-}
+.filtros { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 1rem; margin: 0 auto; }
+.btn-filtro { background: none; border: 1px solid #333; color: #333; padding: 8px 16px; cursor: pointer; text-transform: uppercase; font-size: 0.8rem; border-radius: 4px; }
+.btn-filtro:hover, .btn-filtro.activo { background-color: #333; color: #fff; }
 
-.btn-filtro { 
-    background: none; 
-    border: 1px solid #333; 
-    color: #333; 
-    padding: 8px 16px; 
-    cursor: pointer; 
-    text-transform: uppercase; 
-    font-size: 0.8rem; 
-    transition: all 0.2s; 
-    border-radius: 4px;
-}
+/* Grilla */
+.grilla-productos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 30px; padding: 2rem; max-width: 1200px; margin: 0 auto; }
+.tarjeta { text-align: center; border: 1px solid #eee; border-radius: 8px; padding-bottom: 1rem; transition: box-shadow 0.3s; cursor: pointer; }
+.tarjeta:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.tarjeta img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px 8px 0 0; }
+.tarjeta h3 { font-size: 1rem; margin-top: 1rem; text-transform: uppercase; }
+.id-producto { font-size: 0.8rem; color: #888; font-weight: bold; }
 
-.btn-filtro:hover, .btn-filtro.activo { 
-    background-color: #333; 
-    color: #fff; 
-}
+/* --- VENTANA MODAL (CARRUSEL) --- */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); }
+.modal-contenido { position: relative; background-color: #fff; margin: 5% auto; padding: 20px; width: 90%; max-width: 800px; border-radius: 8px; display: flex; flex-wrap: wrap; gap: 20px; }
+.cerrar-modal { position: absolute; right: 15px; top: 5px; font-size: 2rem; color: #333; cursor: pointer; z-index: 10; }
 
-/* Grilla de Productos */
-.grilla-productos { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
-    gap: 30px; 
-    padding: 2rem; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-}
+.carrusel { position: relative; flex: 1; min-width: 300px; display: flex; align-items: center; justify-content: center; background: #f9f9f9; border-radius: 8px; overflow: hidden; }
+#imagen-carrusel { width: 100%; height: 350px; object-fit: contain; }
+.flecha { position: absolute; background: rgba(0,0,0,0.6); color: white; border: none; font-size: 1.5rem; padding: 10px 15px; cursor: pointer; border-radius: 4px; transition: 0.3s; }
+.flecha:hover { background: black; }
+#prev { left: 10px; }
+#next { right: 10px; }
 
-/* Tarjetas */
-.tarjeta { 
-    text-align: center; 
-}
+.info-detalle { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
+.info-detalle h2 { margin-bottom: 0.5rem; }
+.id-modal { color: #666; font-weight: bold; margin-bottom: 1rem; }
+.info-detalle p { margin-bottom: 1.5rem; }
+.btn-contacto-modal { display: inline-block; background-color: #25D366; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; text-align: center; font-weight: bold; }
 
-.tarjeta img { 
-    width: 100%; 
-    height: 220px; 
-    object-fit: cover; 
-    border: 1px solid #eee; 
-    transition: opacity 0.3s; 
-    border-radius: 4px;
-}
-
-.tarjeta img:hover { 
-    opacity: 0.8; 
-    cursor: pointer; 
-}
-
-.tarjeta-info { 
-    padding-top: 1rem; 
-}
-
-.tarjeta h3 { 
-    font-size: 1rem; 
-    font-weight: normal; 
-    margin-bottom: 0.2rem; 
-    text-transform: uppercase; 
-}
-
-.id-producto { 
-    font-size: 0.8rem; 
-    color: #888; 
-    font-weight: bold; 
-}
-
-/* Pie de página */
-footer { 
-    text-align: center; 
-    padding: 3rem 1rem; 
-    border-top: 1px solid #eee; 
-    margin-top: 3rem; 
-}
-
-.redes { 
-    margin-top: 1rem; 
-}
-
-.redes a { 
-    margin: 0 10px; 
-    color: #333; 
-    text-decoration: none; 
-    font-weight: bold; 
-}
-
-.redes a:hover {
-    text-decoration: underline;
-}
+footer { text-align: center; padding: 2rem; border-top: 1px solid #eee; margin-top: 2rem; color: #666; }

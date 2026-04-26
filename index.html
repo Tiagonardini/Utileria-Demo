@@ -3,38 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Cine - Catálogo Beta</title>
+    <title>La Calma - Utilería y Escenografía</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="logo-container">
-            <img src="./img/La Calma .png" alt="La Calma - Utilería y Escenografía" class="logo-principal">
+            <img src="./img/La Calma .png" alt="La Calma" class="logo-principal">
         </div>
     </header>
 
     <section class="modo-alquiler">
         <h2>Modo de alquiler</h2>
         <ol>
-            <li>Elegí las fotos y anotá los códigos (REF) de los objetos que te interesen.</li>
+            <li>Hacé clic en el producto para ver más fotos y detalles.</li>
+            <li>Anotá los códigos (REF) de los objetos que te interesen.</li>
             <li>Envianos un mail a <strong>contacto@tudominio.com.ar</strong> con fecha de retiro, devolución y nombre de la productora.</li>
-            <li>Te enviamos el presupuesto y, al confirmar, coordinamos el retiro.</li>
         </ol>
     </section>
 
-    <nav class="filtros" id="contenedor-filtros">
-        </nav>
+    <nav class="filtros" id="contenedor-filtros"></nav>
 
-    <main id="contenedor-productos" class="grilla-productos">
-        </main>
+    <main id="contenedor-productos" class="grilla-productos"></main>
+
+    <div id="modal-detalle" class="modal">
+        <span class="cerrar-modal">&times;</span>
+        <div class="modal-contenido">
+            <div class="carrusel">
+                <button id="prev" class="flecha">❮</button>
+                <img id="imagen-carrusel" src="" alt="Imagen detalle">
+                <button id="next" class="flecha">❯</button>
+            </div>
+            <div class="info-detalle">
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-id" class="id-modal"></p>
+                <p id="modal-descripcion"></p>
+                <a href="https://wa.me/5491100000000" class="btn-contacto-modal" target="_blank">Consultar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>Rental Cine © 2026 - Buenos Aires, Argentina</p>
-        <div class="redes">
-            <a href="mailto:contacto@tudominio.com.ar">contacto@tudominio.com.ar</a>
-            <a href="https://wa.me/5491100000000" target="_blank">WhatsApp</a>
-        </div>
+        <p>La Calma © 2026 - Buenos Aires, Argentina</p>
     </footer>
 
     <script src="app.js"></script>

@@ -3,24 +3,38 @@
     "id": "UTL-101",
     "nombre": "Teléfono a disco naranja",
     "categoria": "Teléfonos y Celulares",
-    "imagen": "./img/telefono.jpg"
+    "imagenes": [
+      "./img/telefono.jpg",
+      "./img/telefono2.webp",
+      "./img/telefono3.jpg"
+    ],
+    "descripcion": "Teléfono clásico de mesa, color naranja vibrante. Estética años 70."
   },
   {
     "id": "UTL-102",
-    "nombre": "Televisor de tubo 14 pulgadas",
+    "nombre": "Televisor de tubo",
     "categoria": "Electrónica, Audio y TV",
-    "imagen": "./img/tv.jpg"
+    "imagenes": [
+      "./img/tv.jpg"
+    ],
+    "descripcion": "TV de 14 pulgadas funcional para utilería."
   },
   {
     "id": "UTL-103",
     "nombre": "Silla de madera vintage",
     "categoria": "Muebles",
-    "imagen": "./img/silla.jpg"
+    "imagenes": [
+      "./img/silla.jpg"
+    ],
+    "descripcion": "Silla de madera original, ideal para ambientaciones de época."
   },
   {
     "id": "UTL-104",
     "nombre": "Cenicero de cristal tallado",
     "categoria": "Ceniceros y Tabaco",
-    "imagen": "./img/cenicero.jpg"
+    "imagenes": [
+      "./img/cenicero.jpg"
+    ],
+    "descripcion": "Cenicero de cristal grueso y pesado. Diseño clásico."
   }
 ]
