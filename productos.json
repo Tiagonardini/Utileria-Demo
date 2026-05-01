@@ -2,39 +2,49 @@
   {
     "id": "UTL-101",
     "nombre": "Teléfono a disco naranja",
+    "categoriaPrincipal": "Utileria",
     "categoria": "Teléfonos y Celulares",
-    "imagenes": [
-      "./img/telefono.jpg",
-      "./img/telefono2.webp",
-      "./img/telefono3.jpg"
-    ],
+    "imagenes": ["./img/telefono.jpg", "./img/telefono2.webp", "./img/telefono3.jpg"],
     "descripcion": "Teléfono clásico de mesa, color naranja vibrante. Estética años 70."
   },
   {
     "id": "UTL-102",
     "nombre": "Televisor de tubo",
+    "categoriaPrincipal": "Utileria",
     "categoria": "Electrónica, Audio y TV",
-    "imagenes": [
-      "./img/tv.jpg"
-    ],
+    "imagenes": ["./img/tv.jpg"],
     "descripcion": "TV de 14 pulgadas funcional para utilería."
-  },
-  {
-    "id": "UTL-103",
-    "nombre": "Silla de madera vintage",
-    "categoria": "Muebles",
-    "imagenes": [
-      "./img/silla.jpg"
-    ],
-    "descripcion": "Silla de madera original, ideal para ambientaciones de época."
   },
   {
     "id": "UTL-104",
     "nombre": "Cenicero de cristal tallado",
+    "categoriaPrincipal": "Utileria",
     "categoria": "Ceniceros y Tabaco",
-    "imagenes": [
-      "./img/cenicero.jpg"
-    ],
+    "imagenes": ["./img/cenicero.jpg"],
     "descripcion": "Cenicero de cristal grueso y pesado. Diseño clásico."
+  },
+  {
+    "id": "ESC-201",
+    "nombre": "Silla de madera vintage",
+    "categoriaPrincipal": "Escenografia",
+    "categoria": "Muebles",
+    "imagenes": ["./img/silla.jpg"],
+    "descripcion": "Silla de madera original, ideal para ambientaciones de época."
+  },
+  {
+    "id": "ESC-202",
+    "nombre": "Lámpara de pie de época",
+    "categoriaPrincipal": "Escenografia",
+    "categoria": "Iluminación",
+    "imagenes": ["./img/silla.jpg"], 
+    "descripcion": "Lámpara escenográfica para interiores de los años 50."
+  },
+  {
+    "id": "LOC-301",
+    "nombre": "Galpón Industrial Abandonado",
+    "categoriaPrincipal": "Locacion",
+    "categoria": "Interiores Industriales",
+    "imagenes": ["./img/casa_quinta.webp"], 
+    "descripcion": "Galpón de 200m2 con luz natural y paredes de ladrillo a la vista. Zona Sur."
   }
 ]
