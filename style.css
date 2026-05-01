@@ -14,7 +14,7 @@ html {
 body {
     background-color: #ffffff;
     color: var(--c-negro);
-    /* Tipografía principal: Limpia y moderna */
+    /* Tipografía principal: Limpia y moderna para celulares */
     font-family: 'Outfit', sans-serif;
     overflow-x: hidden;
 }
@@ -24,21 +24,20 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-/* NAVBAR FLUIDO Y EFECTO VIDRIO */
+/* NAVBAR BLANCO SÓLIDO (A prueba de GitHub Pages) */
 .custom-navbar { 
-    /* Fondo semi-transparente con desenfoque atrás */
-    background-color: rgba(255, 255, 255, 0.9) !important; 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: #ffffff !important; 
+    opacity: 1 !important;
+    visibility: visible !important;
     border-bottom: 1px solid rgba(164, 137, 109, 0.2); 
-    z-index: 1030;
-    transition: all 0.4s ease;
+    z-index: 9999 !important;
 }
 
-/* LOGO Y TEXTO */
+/* LOGO Y TEXTO (Sobrescrito por seguridad) */
 .logo-img-large {
-    max-height: 50px;
-    width: auto;
+    height: 60px !important;
+    width: auto !important;
+    display: block;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -57,7 +56,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .logo-img-large { max-height: 80px; }
+    .logo-img-large { height: 80px !important; }
     .brand-text-container { max-width: 100%; }
     .logo-title { font-size: 2rem; }
     .logo-subtitle { font-size: 0.95rem; }
@@ -94,7 +93,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* PESTAÑAS (TABS) PRINCIPALES */
+/* PESTAÑAS PRINCIPALES */
 #contenedor-filtros-principales {
     display: flex; justify-content: center; 
     border-bottom: 2px solid rgba(164, 137, 109, 0.3);
@@ -124,7 +123,7 @@ body {
     transform: scale(1.05);
 }
 
-/* TARJETAS */
+/* TARJETAS Y ANIMACIÓN FLUIDA */
 .custom-card {
     border: none; border-radius: 12px; background: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.04); 
@@ -145,7 +144,7 @@ body {
 .section-title { color: var(--c-verde-oscuro); font-size: 2.2rem; }
 .bg-pasos { background-color: rgba(164, 137, 109, 0.05); }
 
-/* TARJETAS DE PASOS Y ANIMACIÓN FLOTANTE */
+/* TARJETAS DE PASOS Y NÚMEROS FLOTANTES */
 .step-card {
     background-color: #ffffff; border-radius: 16px;
     border: 1px solid rgba(164, 137, 109, 0.2); 
@@ -164,14 +163,12 @@ body {
     color: #ffffff; font-size: 1.8rem; font-weight: 700; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto; box-shadow: 0 5px 15px rgba(58, 69, 45, 0.3);
-    animation: float 4s ease-in-out infinite; /* Animación continua para fluidez */
+    animation: float 4s ease-in-out infinite; 
 }
 
-/* Escalonamos la animación para que no suban y bajen todos a la vez */
 .col-md-4:nth-child(1) .step-number { animation-delay: 0s; }
 .col-md-4:nth-child(2) .step-number { animation-delay: 1s; }
 .col-md-4:nth-child(3) .step-number { animation-delay: 2s; }
-
 
 /* REDES SOCIALES */
 .social-btn {
@@ -207,6 +204,6 @@ body {
 .btn-prev { left: 10px; }
 .btn-next { right: 10px; }
 
-/* Animaciones */
+/* ANIMACIONES GLOBALES JS */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.fade-in-up { animation: fadeInUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; opacity: 0; }
+.fade-in-up { animation: fadeInUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; opacity: 0; }
